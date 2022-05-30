@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blue_1"
+    android:screenOrientation="portrait">
+
+
+    <Button
+        android:id="@+id/bGoToAddBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="4"
+        android:text="Dodaj ksiazke"
+        app:layout_constraintBottom_toTopOf="@id/tEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akronim"
+        android:text="Moje książki"
+        android:textAlignment="center"
+        android:textColor="@color/brown_1"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/booksList"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_marginBottom="12dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bGoToAddBook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tTitle">
+
+    </ListView>
+
+
+    <TextView
+            android:id="@+id/tEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="email"
+            android:gravity="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/bLogout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bLogout"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="Wyloguj"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
